@@ -1,0 +1,62 @@
+import java.util.Scanner;
+class Employee
+{
+   Scanner sc=new Scanner(System.in);
+   String name;
+   int id;
+   String designation;
+   void reademp()
+   {
+      System.out.println("enter name of employee");
+      name=sc.nextLine();
+      System.out.println("enter employee id");
+      id=sc.nextInt();
+      sc.nextLine();
+      System.out.println("enter employee designation");
+      designation=sc.nextLine();
+   }
+}
+class Salary extends Employee
+{
+  float bp,hra,da,pf,np;
+  void readsalary()
+  {
+    System.out.println("enter basic pay");
+    bp=sc.nextFloat();
+    System.out.println("enter house rent allowance");
+    hra=sc.nextFloat();
+    System.out.println("enter dearness allowance");
+    da=sc.nextFloat();
+    System.out.println("enter provident fund");
+    pf=sc.nextFloat();
+  }
+  void calculatesalary()
+  {
+    System.out.println("basic net pay is");
+    np=bp+hra+da-pf;	
+  }
+  void displayemp()
+  {
+    System.out.println("employee name:"+name+" "+"id no is:"+id+" "+"designation is:"+designation+" " +"employee salary is:"+np);
+  }
+}
+class Mains
+{
+  public static void main(String[] args)
+  {
+    Scanner a=new Scanner(System.in);
+    System.out.println("enter no of employees");
+    int n=a.nextInt();
+    Salary[] b=new Salary[n];
+    for(int i=0;i<n;i++)
+    {
+      System.out.println("test choice:"+(i+1));
+      b[i]=new Salary();
+      b[i].reademp();
+      b[i].readsalary();
+      b[i].calculatesalary();
+      b[i].displayemp();
+      System.out.println("\n");
+    }
+  }
+} 
