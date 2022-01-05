@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Room{
+ Scanner sc=new Scanner(System.in);
+ void area()
+ {
+   System.out.println("enter l,b values");
+   int l,b;
+   l=sc.nextInt();
+   b=sc.nextInt();
+   System.out.println("area of room is:"+(l*b));
+ }
+ void area(int x)
+ {
+   System.out.println("area of room is:"+(x*x));
+ }
+ void area(int x,int y)
+ {
+   System.out.println("area of room is:"+(x*y));
+ }
+}
+class AreaMethod{
+ public static void main(String[] args){
+ Scanner b=new Scanner(System.in);
+ System.out.println("enter 1st parameters value");
+ int n1=b.nextInt();
+ System.out.println("enter 2nd parameter value");
+ int n2=b.nextInt();
+  Room a=new Room();
+  a.area();
+  a.area(n1);
+  a.area(n1,n2);
+  }
+}
