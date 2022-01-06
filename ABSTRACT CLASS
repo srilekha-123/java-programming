@@ -1,0 +1,68 @@
+import java.lang.Math;
+import java.util.Scanner;
+abstract class Shape
+{
+  Scanner sc=new Scanner(System.in);
+  double a,b;
+  abstract void printArea();
+}
+class Rectangle extends Shape
+{
+  int l,b;
+  void read1()
+  {
+    System.out.println("enter l,b value");
+    l=sc.nextInt();
+    b=sc.nextInt();
+  }
+  void printArea()
+  {
+     System.out.println("area of rectangle is:"+(l*b));
+  }
+}
+class Triangle extends Shape
+{
+  double a,b,c,s,area;
+  void read2()
+  {
+   System.out.println("enter a,b,c values");
+   a=sc.nextDouble();
+   b=sc.nextDouble();
+   c=sc.nextDouble();
+  }
+  void printArea()
+  { 
+    s=(a+b+c)/2;
+    area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+    System.out.println("area of triangle is:"+area);
+  }
+}
+class Circle extends Shape
+{
+  double r,ar;
+  void read3()
+  {
+   System.out.println("enter r value");
+   r=sc.nextDouble();
+  }
+  void printArea()
+  {
+    ar=(3.14)*(r*r);
+    System.out.println("area of circle is:"+ar);
+  }
+}
+class Abstrac
+{
+  public static void main(String[] args)
+  {
+    Rectangle obj1=new Rectangle();
+    obj1.read1();
+    obj1.printArea();
+    Triangle obj2=new Triangle();
+    obj2.read2();
+    obj2.printArea();
+    Circle obj3=new Circle();
+    obj3.read3();
+    obj3.printArea();
+  }
+}  
