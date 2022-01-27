@@ -1,0 +1,69 @@
+import java.util.Scanner;
+class Employee{
+ Scanner sc=new Scanner(System.in);
+ String name;
+ int id;
+ double salary;
+ void reademp()
+ {
+   System.out.println("enter name");
+   name=sc.nextLine();
+   System.out.println("enter id:");
+   id=sc.nextInt();
+   System.out.println("enter salary");
+   salary=sc.nextDouble();
+ }
+}
+class Permanent_employee extends Employee{
+ void incr1()
+ {
+   salary+=(5.0/100)*salary;
+ }
+ void printemp()
+ {
+   System.out.println(name);
+   System.out.println(id);
+   System.out.println(salary);
+ }
+}
+class Temporary_employee extends Employee{
+ void incr2()
+ {
+   salary+=(3.5/100)*salary;
+ }
+ void printemp()
+ {
+   System.out.println(name);
+   System.out.println(id);
+   System.out.println(salary);
+ }
+}
+public class Print{
+ public static void main(String[] args)
+ {
+     Scanner a=new Scanner(System.in);
+     System.out.println("enter no of employees");
+     int n1=a.nextInt();
+     for(int j=0;j<n1;j++)
+     {
+      System.out.println("test choice:"+(j+1));
+      int no=a.nextInt();
+      if(no==1)
+      {  
+       Temporary_employee t=new Temporary_employee();
+       t.reademp();
+       t.incr2();
+       t.printemp();
+       System.out.println("\n");
+      }
+      else
+       {
+        Permanent_employee p=new Permanent_employee();
+        p.reademp();
+        p.incr1();
+        p.printemp();
+       System.out.println("\n");
+      }
+     }
+ }
+}
