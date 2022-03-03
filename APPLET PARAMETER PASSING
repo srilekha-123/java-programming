@@ -1,0 +1,16 @@
+import java.applet.Applet;  
+import java.awt.Graphics;  
+public class UseParam extends Applet{  
+  public void paint(Graphics g){  
+  String str=getParameter("msg");  
+  g.drawString(str,100,100);  
+}    
+}  
+ HTML
+<html>  
+<body>  
+<applet code="UseParam.class" width="300" height="300">  
+<param name="msg" value="hello everone.I am student of rvrjc college">  
+</applet>  
+</body>  
+</html>
