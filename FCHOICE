@@ -1,0 +1,16 @@
+import java.awt.*;
+public class Choic{
+public static void main(String rargs[]){
+Frame f=new Frame("choice box");
+Choice c=new Choice();
+c.setBounds(50,100,100,30);
+c.add("1");
+c.add("2");
+c.add("3");
+c.add("4");
+f.add(c);
+f.setSize(500,500);
+f.setLayout(null);
+f.setVisible(true);
+}
+}
