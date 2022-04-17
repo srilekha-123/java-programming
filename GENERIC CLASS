@@ -1,0 +1,19 @@
+class A<T>
+{
+T item;
+public A(T item){
+this.item=item;
+}
+public <T>void show(){
+System.out.println("value is:"+item);
+System.out.println("type is:"+item.getClass().getName());
+}
+}
+class Gen1{
+public static void main(String args[]){
+A <Integer>t=new A<Integer>(25);
+t.show();
+A <String>t1=new A<String>("hello");
+t1.show();
+}
+}
