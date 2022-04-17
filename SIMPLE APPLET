@@ -1,0 +1,10 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+public class Sec extends Applet{
+public void paint(Graphics g){
+g.drawString("wel",150,150);
+}
+}
+/*<applet code="Sec.class" width="500" height="500">
+</applet>
+*/
