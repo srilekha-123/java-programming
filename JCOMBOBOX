@@ -1,0 +1,13 @@
+import javax.swing.*;
+public class Combo{
+public static void main(String args[]){
+JFrame f=new JFrame("combobox");
+String c[]={"1","2","3","4","5"};
+JComboBox cb=new JComboBox(c);
+cb.setBounds(50,50,90,20);
+f.add(cb);
+f.setLayout(null);
+f.setSize(400,400);
+f.setVisible(true);
+}
+}
