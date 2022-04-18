@@ -1,0 +1,7 @@
+import javax.swing.*;
+public class Opt{
+public static void main(String[] args){
+JFrame f=new JFrame("message");
+JOptionPane.showMessageDialog(f,"Hello ,Hii");
+}
+}
