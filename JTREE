@@ -1,0 +1,14 @@
+import javax.swing.*;
+public class Tab{
+public static void main(String args[]){
+JFrame f=new JFrame("table");
+String data[][]={{"1","a","x"},{"2","b","y"},{"3","c","z"}};
+String col[]={"1ax","2by","3cz"};
+JTable jt=new JTable(data,col);
+jt.setBounds(30,40,200,300);
+JScrollPane sp=new JScrollPane(jt);
+f.add(sp);
+f.setSize(300,400);
+f.setVisible(true);
+}
+}
